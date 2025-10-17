@@ -17,7 +17,8 @@ public class Fila { //fila do atendimento
     }
 
     void enqueue(String nome, String id, String motivo){ //add cliente no final
-        NodeFila novo = new NodeFila(nome, id, motivo);
+       Elemento e = new Elemento(nome, id, motivo);
+        NodeFila novo = new NodeFila(e);
 
         if (isEmpty()){
             frente = novo;
@@ -35,7 +36,7 @@ public class Fila { //fila do atendimento
             System.out.println("A fila está vazia. Nenhum cliente esperando atendimento. ");
         }
         else {
-            System.out.println("Cliente atendido: " + frente.nomeCliente);
+            System.out.println("Cliente atendido: " + System.out.println("Cliente atendido: " +
             frente = frente.proximo;
             if (frente == null){
                 tras = null;
@@ -51,9 +52,11 @@ public class Fila { //fila do atendimento
             System.out.println("\n *** Fila de Atendimento *** ");
             NodeFila atual = frente;
             while (atual != null){
-                System.out.println("Cliente: " + atual.nomeCliente + " | ID: " + atual.idCliente + " | Motivo: " + atual.motivo);
+                Elemento e = atual.getDado();
+                System.out.println("Cliente: " + e.getNomeCliente() + " | ID: " + e.getId() + " | Motivo: " + e.getMotivo());
                 atual = atual.proximo;
             }
         }
     }
 }
+
