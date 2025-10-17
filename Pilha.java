@@ -14,10 +14,12 @@ public class Pilha {
     }
 
     public void adicionar(String id, String descricao, String dataHora){
-        NodePilha novo = new NodePilha(id, descricao, dataHora);
+        Elemento e = new Elemento(id, descricao, dataHora);
+        NodePilha novo = new NodePilha(e);
+        
         novo.proximo = topo;
         topo = novo;
-        System.out.println("Adicionado ao histórico: " + descricao);
+        System.out.println("Adicionado ao histórico: " + e.getDescricao());
     }
 
     public void remover(){
@@ -28,7 +30,7 @@ public class Pilha {
 
         NodePilha removido = topo;
         topo = topo.proximo;
-        System.out.println("Removido do histórico: " + removido.descricao);
+        System.out.println("Removido do histórico: " + removido.getDado().getDescricao());
 
     }
 
@@ -41,10 +43,11 @@ public class Pilha {
         System.out.println("----- Histórico -----");
         NodePilha atual = topo;
         while (atual != null){
-            System.out.println("ID: " + atual.id);
-            System.out.println("Descrição: " + atual.descricao);
-            System.out.println("Data e Hora: " + atual.dataHora);
-            System.out.println("------------");
+            Elemento e = atual.getDado();
+            System.out.println("ID: " + e.getId());
+            System.out.println("Descrição: " + e.getDescricao());
+            System.out.println("Data e Hora: " + e.getDataHora());
+            System.out.println("----------------------");
             atual = atual.proximo;
         }
 
