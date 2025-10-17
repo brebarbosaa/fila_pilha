@@ -1,13 +1,14 @@
 public class NodeFila { //nó da fila
-    String nomeCliente;
-    String idCliente;
-    String motivo;
+    private Elemento dado;
     NodeFila proximo;
 
-    NodeFila(String nome, String id, String motivo) {
-        this.nomeCliente = nome;
-        this.idCliente = id;
-        this.motivo = motivo;
+    NodeFila(Elemento dado) {
+        this.dado = dado;
         this.proximo = null;
     }
+
+    public Elemento getDado() {
+        return dado;
+    }
 }
+
