@@ -14,7 +14,7 @@ public class Pilha {
     }
 
     public void adicionar(String id, String descricao, String dataHora){
-        Elemento e = new Elemento(id, descricao, dataHora);
+        Elemento e = new Elemento("solicitacao",id, descricao, dataHora);
         NodePilha novo = new NodePilha(e);
         
         novo.proximo = topo;

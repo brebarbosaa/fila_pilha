@@ -1,9 +1,10 @@
 public class NodeFila { //nó da fila
-    private Elemento dado;
+    Elemento dado;  // Armazena o cliente como um Elemento
     NodeFila proximo;
+    Elemento elemento;
 
-    NodeFila(Elemento dado) {
-        this.dado = dado;
+    NodeFila(Elemento e) {
+        this.dado = e;
         this.proximo = null;
     }
 
@@ -11,4 +12,3 @@ public class NodeFila { //nó da fila
         return dado;
     }
 }
-
