@@ -104,4 +104,4 @@ As estruturas utilizadas pelo sistema são:
 ---
 
 ## Desenvolvido por:
-Alana Queiroz, Brenda Barbosa e Letícia Vieira
+Alana Queiroz, Brenda Barbosa e Leticia Vieira
