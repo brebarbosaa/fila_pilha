@@ -23,7 +23,7 @@ Este projeto implementa um sistema de gerenciamento de atendimento ao cliente ut
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 1. **Compilar o projeto:**
    ```bash
